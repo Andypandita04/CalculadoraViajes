@@ -104,7 +104,7 @@ export function SummaryCard({
 
         {/* Badge de completado */}
         {countryName && hasValidWeeks && hasValidDate && (
-          <div className="mt-4 inline-flex items-center px-3 py-1 bg-primary bg-opacity-10 text-primary text-sm font-medium rounded-full">
+          <div className="mt-4 inline-flex items-center px-3 py-1 bg-primary text-white text-sm font-medium rounded-full">
             ✓ Información completa
           </div>
         )}
