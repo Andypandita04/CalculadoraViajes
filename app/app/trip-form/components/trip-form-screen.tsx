@@ -115,7 +115,7 @@ export function TripFormScreen() {
   };
 
   const handleGoBack = () => {
-    router.push('/quick-select');
+    router.push('/');
   };
 
   if (isLoadingDestinations) {
@@ -145,40 +145,46 @@ export function TripFormScreen() {
 
       <div className="container-app pb-12">
         {/* Título y subtítulo */}
-        <div className="text-center mb-12 space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+        <div className="text-center mb-8 space-y-3">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
             Planifica tu viaje en{' '}
             <span className="text-primary-dark">3 pasos</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto">
             Conoce cuánto dinero necesitas para tu próxima aventura y cómo ahorrar más con beneficios exclusivos
           </p>
 
           {/* Proceso en 3 pasos */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-lg">1</span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+            <div className="bg-white rounded-lg p-4 shadow-md border border-gray-100 flex items-start gap-3">
+              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-sm">1</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Selecciona destino</h3>
-              <p className="text-gray-600 text-sm">Elige tu país de destino y duración del viaje</p>
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-900 mb-1">Selecciona destino</h3>
+                <p className="text-gray-600 text-xs">Elige tu país de destino y duración del viaje</p>
+              </div>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-lg">2</span>
+            <div className="bg-white rounded-lg p-4 shadow-md border border-gray-100 flex items-start gap-3">
+              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-sm">2</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Ve tu presupuesto</h3>
-              <p className="text-gray-600 text-sm">Conoce el costo detallado por categorías</p>
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-900 mb-1">Ve tu presupuesto</h3>
+                <p className="text-gray-600 text-xs">Conoce el costo detallado por categorías</p>
+              </div>
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-lg">3</span>
+            <div className="bg-white rounded-lg p-4 shadow-md border border-gray-100 flex items-start gap-3">
+              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-sm">3</span>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">Descubre beneficios</h3>
-              <p className="text-gray-600 text-sm">Obtén tu plan personalizado de ahorro</p>
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-900 mb-1">Descubre beneficios</h3>
+                <p className="text-gray-600 text-xs">Obtén tu plan personalizado de ahorro</p>
+              </div>
             </div>
           </div>
         </div>
