@@ -35,7 +35,7 @@ export function SummaryCard({
   return (
     <div className={`bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden ${className}`}>
       {/* Imagen del país */}
-      {destination?.imageUrl && !compact && (
+      {/* {destination?.imageUrl && !compact && (
         <div className="relative h-32 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center p-2">
           <img
             src={destination.imageUrl}
@@ -47,7 +47,7 @@ export function SummaryCard({
             }}
           />
         </div>
-      )}
+      )} */}
 
       <div className={compact ? 'p-4' : 'p-6'}>
         <h3 className={`font-semibold text-gray-900 mb-4 ${compact ? 'text-base' : 'text-lg'}`}>
