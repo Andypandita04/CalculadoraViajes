@@ -148,7 +148,7 @@ export function BudgetSummaryScreen() {
         {/* Título principal */}
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Tu presupuesto de intercambio
+            Tu presupuesto de viaje
           </h1>
           <p className="text-lg text-gray-600">
             Costos {tripDraft.weeks > 1 ? 'semanales' : 'del viaje'} estimados y oportunidades de ahorro
