@@ -1,7 +1,6 @@
 
 'use client';
 
-import Image from 'next/image';
 import { MapPin, Clock, Calendar } from 'lucide-react';
 import { Destination } from '@/lib/types';
 import { formatStartDate } from '@/lib/dates';
@@ -37,13 +36,11 @@ export function SummaryCard({
     <div className={`bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden ${className}`}>
       {/* Imagen del país */}
       {destination?.imageUrl && !compact && (
-        <div className="relative h-32 bg-gray-200">
-          <Image
+        <div className="relative h-32 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center p-2">
+          <img
             src={destination.imageUrl}
-            alt={`Imagen de ${destination.country}`}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            alt={`Mapa de ubicación de ${destination.country}`}
+            className="h-full w-auto object-contain"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
