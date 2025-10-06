@@ -115,7 +115,7 @@ export function TripFormScreen() {
   };
 
   const handleGoBack = () => {
-    router.push('/quick-select');
+    router.push('/');
   };
 
   if (isLoadingDestinations) {
@@ -145,13 +145,13 @@ export function TripFormScreen() {
 
       <div className="container-app pb-12">
         {/* Título y subtítulo */}
-        <div className="text-center mb-12 space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+        <div className="text-center mb-8 space-y-3">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
             Planifica tu viaje en{' '}
             <span className="text-primary-dark">3 pasos</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-sm md:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto">
             Conoce cuánto dinero necesitas para tu próxima aventura y cómo ahorrar más con beneficios exclusivos
           </p>
 
