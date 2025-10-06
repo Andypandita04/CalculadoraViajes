@@ -26,12 +26,12 @@ export function WelcomeScreen() {
             src="https://cdn.abacus.ai/images/4736b22c-e61b-434d-b4eb-824aa1ed7baa.png"
             alt="Planeta Tierra con aviones volando alrededor"
             fill
-            className="object-cover object-center opacity-20"
+            className="object-cover object-center opacity-40"
             priority
             sizes="100vw"
           />
           {/* Overlay gradiente para mejor legibilidad */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/5 to-transparent" />
         </div>
       </div>
 
@@ -70,50 +70,53 @@ export function WelcomeScreen() {
               </div>
             </div>
 
-            {/* Botón principal */}
-            <div className="space-y-4">
-              <button
-                onClick={handleGetStarted}
-                disabled={isLoading}
-                className={`
-                  btn-primary text-xl px-8 py-4 flex items-center space-x-3 group
-                  ${isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:scale-105'}
-                  transform transition-all duration-300
-                `}
-                aria-label="Comenzar calculadora de presupuesto"
-              >
-                {isLoading ? (
-                  <>
-                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white" />
-                    <span>Cargando...</span>
-                  </>
-                ) : (
-                  <>
-                    <Plane className="h-6 w-6 group-hover:rotate-12 transition-transform duration-300" />
-                    <span>Comenzar</span>
-                    <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
-                  </>
-                )}
-              </button>
+            {/* Botón principal y Stats destacados - Mismo nivel */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              {/* Botón principal */}
+              <div className="space-y-4">
+                <button
+                  onClick={handleGetStarted}
+                  disabled={isLoading}
+                  className={`
+                    btn-primary text-xl px-8 py-4 flex items-center space-x-3 group w-full justify-center
+                    ${isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:scale-105'}
+                    transform transition-all duration-300
+                  `}
+                  aria-label="Comenzar calculadora de presupuesto"
+                >
+                  {isLoading ? (
+                    <>
+                      <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white" />
+                      <span>Cargando...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Plane className="h-6 w-6 group-hover:rotate-12 transition-transform duration-300" />
+                      <span>Comenzar</span>
+                      <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
+                    </>
+                  )}
+                </button>
 
-              <p className="text-sm text-gray-500">
-                ✨ Completamente gratis • 📊 Resultados en 3 minutos
-              </p>
-            </div>
+                {/*<p className="text-sm text-gray-500 text-center md:text-left">
+                  ✨ Completamente gratis • 📊 Resultados en 3 minutos
+                </p>*/}
+              </div>
 
-            {/* Stats destacados */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">58+</div>
-                <div className="text-sm text-gray-600">Destinos</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">14</div>
-                <div className="text-sm text-gray-600">Monedas</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-primary">4</div>
-                <div className="text-sm text-gray-600">Beneficios</div>
+              {/* Stats destacados */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">58+</div>
+                  <div className="text-sm text-gray-600">Destinos</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">14</div>
+                  <div className="text-sm text-gray-600">Monedas</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-primary">4</div>
+                  <div className="text-sm text-gray-600">Beneficios</div>
+                </div>
               </div>
             </div>
           </div>
