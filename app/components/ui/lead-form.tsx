@@ -80,12 +80,28 @@ export function LeadForm({ onSubmit, className = '', loading = false }: LeadForm
   return (
     <div className={`bg-white rounded-xl shadow-lg border border-gray-100 ${className}`}>
       <div className="p-8">
-        <h2 className="font-bold text-gray-900  text-center">
-          Ten accesso a estos beneficios por solo 49 MXN/mes.
-        </h2>
-        <h3 className="text-gray-900  text-center">
-          Crea tu cuenta y espera nuestro lanzamiento.
-        </h3>
+        <div className="space-y-1 mb-6">
+          <div className="flex items-start gap-3">
+            <div className="flex-shrink-0 mt-1">
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              </div>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-900 leading-tight mb-2">
+                Ten acceso a estos beneficios
+              </h3>
+              <p className="text-sm text-gray-600">
+                Por solo <span className="font-bold text-[#00CF0C] text-base">$49 MXN/mes</span>
+              </p>
+              <p className="text-sm text-gray-500">
+                Crea tu cuenta y espera nuestro lanzamiento
+              </p>
+            </div>
+          </div>
+        </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Nombre completo */}

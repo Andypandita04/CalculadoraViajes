@@ -213,8 +213,12 @@ export function BenefitsBreakdownScreen() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Beneficios para tu viaje a {countryName}
+                Conoce los beneficios de nuestra membresía  {countryName}
               </h1>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Descubre cómo puedes ahorrar más para tu viaje a {countryName}
+              </h2>
+
               <p className="text-lg text-gray-600">
                 Aunque no tenemos datos específicos para este destino, podemos ayudarte con un plan personalizado.
               </p>
@@ -255,11 +259,11 @@ export function BenefitsBreakdownScreen() {
               <TrendingUp className="h-8 w-8 text-primary" />
             </div>*/}
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Beneficios para tu viaje a {countryName}
+              Conoce los beneficios de nuestra membresía
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Descubre cuánto podrías ahorrar cada semana implementando estos beneficios financieros 
-              para tu viaje de {tripDraft.weeks} semana{tripDraft.weeks !== 1 ? 's' : ''}.
+              para tu viaje a {countryName} de {tripDraft.weeks} semana{tripDraft.weeks !== 1 ? 's' : ''}.
             </p>
           </div>
 
