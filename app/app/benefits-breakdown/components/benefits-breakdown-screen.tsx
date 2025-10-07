@@ -263,42 +263,50 @@ export function BenefitsBreakdownScreen() {
             </p>
           </div>
 
-          {/* Lista de beneficios */}
-          <BenefitsList calculation={benefitCalculation} />
+          {/* Lista de beneficios y Formulario en 2 columnas */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Columna izquierda - Beneficios (2/3) */}
+            <div className="lg:col-span-2 space-y-8">
+              {/* Lista de beneficios */}
+              <BenefitsList calculation={benefitCalculation} />
 
-          {/* Total de ahorros */}
-          <SavingsTotal calculation={benefitCalculation} />
+              {/* Total de ahorros */}
+              <SavingsTotal calculation={benefitCalculation} />
 
-          {/* Mensaje contextual */}
-          <div className="text-center">
-            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 max-w-2xl mx-auto">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                💰 Este ahorro es equivalente a
-              </h3>
-              <div className="text-3xl font-bold text-primary mb-2">
-                {benefitCalculation.equivalentWeeks.toFixed(1)} semanas
+              {/* Mensaje contextual */}
+              <div className="text-center">
+                <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    💰 Este ahorro es equivalente a
+                  </h3>
+                  <div className="text-3xl font-bold text-primary mb-2">
+                    {benefitCalculation.equivalentWeeks.toFixed(1)} semanas
+                  </div>
+                  <p className="text-gray-600">
+                    del costo total de tu viaje. ¡Prácticamente como si tuvieras semanas gratis!
+                  </p>
+                </div>
               </div>
-              <p className="text-gray-600">
-                del costo total de tu viaje. ¡Prácticamente como si tuvieras semanas gratis!
-              </p>
-            </div>
-          </div>
-
-          {/* Formulario final */}
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                ¿Te interesa optimizar tu ahorro?
-              </h2>
-              <p className="text-gray-600">
-                Déjanos tus datos y te enviaremos un plan personalizado para alcanzar tu meta de viaje.
-              </p>
             </div>
 
-            <LeadForm
-              onSubmit={handleLeadFormSubmit}
-              loading={isSubmittingLead}
-            />
+            {/* Columna derecha - Formulario (1/3) */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-6 space-y-6">
+                <div className="text-center lg:text-left">
+                  <h2 className="text-xl font-bold text-gray-900 mb-2">
+                    ¿Te interesa optimizar tu ahorro?
+                  </h2>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Déjanos tus datos y te enviaremos un plan personalizado.
+                  </p>
+                </div>
+
+                <LeadForm
+                  onSubmit={handleLeadFormSubmit}
+                  loading={isSubmittingLead}
+                />
+              </div>
+            </div>
           </div>
 
           {/* Información adicional */}
