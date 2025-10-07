@@ -84,7 +84,7 @@ export function LeadForm({ onSubmit, className = '', loading = false }: LeadForm
           Ten accesso a estos beneficios por solo 49 MXN/mes.
         </h2>
         <h3 className="text-gray-900  text-center">
-          Crea tu cuenta y espera nuestro lanzamientos.
+          Crea tu cuenta y espera nuestro lanzamiento.
         </h3>
 
         <form onSubmit={handleSubmit} className="space-y-6">
