@@ -251,9 +251,9 @@ export function BenefitsBreakdownScreen() {
           
           {/* Título principal */}
           <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4">
+            {/*<div className="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 rounded-full mb-4">
               <TrendingUp className="h-8 w-8 text-primary" />
-            </div>
+            </div>*/}
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Beneficios para tu viaje a {countryName}
             </h1>
@@ -292,14 +292,14 @@ export function BenefitsBreakdownScreen() {
             {/* Columna derecha - Formulario (1/3) */}
             <div className="lg:col-span-1">
               <div className="sticky top-6 space-y-6">
-                <div className="text-center lg:text-left">
+                {/*<div className="text-center lg:text-left">
                   <h2 className="text-xl font-bold text-gray-900 mb-2">
                     ¿Te interesa optimizar tu ahorro?
                   </h2>
                   <p className="text-sm text-gray-600 mb-4">
                     Déjanos tus datos y te enviaremos un plan personalizado.
                   </p>
-                </div>
+                </div>*/}
 
                 <LeadForm
                   onSubmit={handleLeadFormSubmit}
@@ -309,7 +309,7 @@ export function BenefitsBreakdownScreen() {
             </div>
           </div>
 
-          {/* Información adicional */}
+          {/* Información adicional 
           <div className="bg-blue-50 rounded-xl p-8 border border-blue-100">
             <h4 className="font-semibold text-blue-900 mb-4 text-center">
               📋 Próximos pasos recomendados
@@ -334,7 +334,7 @@ export function BenefitsBreakdownScreen() {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

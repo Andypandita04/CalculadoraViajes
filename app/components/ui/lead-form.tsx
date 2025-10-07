@@ -80,8 +80,11 @@ export function LeadForm({ onSubmit, className = '', loading = false }: LeadForm
   return (
     <div className={`bg-white rounded-xl shadow-lg border border-gray-100 ${className}`}>
       <div className="p-8">
-        <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-          Crear plan de ahorro personalizado
+        <h2 className="font-bold text-gray-900  text-center">
+          Ten accesso a estos beneficios por solo 49 MXN/mes.
+        </h2>
+        <h3 className="text-gray-900  text-center">
+          Crea tu cuenta y espera nuestro lanzamientos.
         </h3>
 
         <form onSubmit={handleSubmit} className="space-y-6">
